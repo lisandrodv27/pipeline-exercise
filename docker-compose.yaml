@@ -10,13 +10,11 @@ services:
       - chaperoo-service    
   chaperoo-service: 
     image: jordangrindrod/chaperoo-service
+    environment:
+      - DB_PASSWORD=${DB_PASSWORD}
     depends_on: 
       - chaperoo-db
   chaperoo-db:
     image: jordangrindrod/chaperoo-db
     environment:
-      - MYSQL_ROOT_PASSWORD=password
-  jenkins:
-    image: jenkins/jenkins:latest
-    environment:
-      - JENKINS_OPTS="--prefix=/jenkins"
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}

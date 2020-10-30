@@ -1,29 +1,11 @@
-# chaperoo_client
+# Chaperoo To-Do List
 
-## Project setup
-```
-npm install
-```
+## Run the Application
 
-### Compiles and hot-reloads for development
+Set an environment variable for `$DB_PASSWORD` and run:
+
 ```
-npm run serve
+docker-compose pull && docker-compose up -d
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The app will be running on `port 80`.
