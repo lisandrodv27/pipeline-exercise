@@ -15,7 +15,7 @@ services:
   chaperoo-db:
     image: jordangrindrod/chaperoo-db
     environment:
-      - MYSQL_ROOT_PASSWORD=password
+      - DB_PASSWORD=password123
   jenkins:
     image: jenkins/jenkins:latest
     environment:
