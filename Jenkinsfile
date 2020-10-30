@@ -1,6 +1,10 @@
 
 pipeline {
     agent any
+    
+    environment {
+        DB_PASSWORD=credentials('DATABASE_PASSWORD')
+    }
     stages {  
         stage('Install Docker and Docker-compose') {
             steps {
@@ -17,6 +21,11 @@ pipeline {
             steps {
             sh 'sudo docker-compose pull && sudo -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d'
             }
+        }
+        
+        stage('Show password') {
+            steps {
+                sh "echo ${DB_PASSWORD}"
         }
             
     }       
