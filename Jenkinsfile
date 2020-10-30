@@ -8,7 +8,7 @@ pipeline {
     stages {  
         stage('Install Docker and Docker-compose') {
             steps {
-            sh 'curl https://get.docker.com | sudo bash
+            sh 'curl https://get.docker.com | sudo bash'
             sh 'sudo usermod -aG docker jenkins'
             sh 'sudo apt-get update'
             sh 'sudo apt install -y curl jq'
