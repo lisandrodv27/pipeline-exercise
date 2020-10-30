@@ -24,11 +24,6 @@ pipeline {
             }
         }
         
-        stage('Show password') {
-            steps {
-                sh "echo ${DB_PASSWORD}"
-            }
-        }
             
     }       
 }
